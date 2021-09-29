@@ -1,0 +1,253 @@
+/* INDEX */
+/*aca empieza header*/
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: red;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-left: 2%;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    li{
+        list-style:none;
+        margin: 10;
+        border-style:solid;
+        border-color: black;
+        padding: 10px;
+        background-color: rgb(231, 216, 195);
+
+        a{
+            color:rgb(145, 24, 24);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+        a:hover{
+            color: white;
+        }
+    }
+    li:hover{
+            background-color: rgb(165, 36, 36);
+    }
+    
+/*aca empieza main*/
+}
+.inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height: 500px;
+    background-image: url("../Media/plato2.jpg");
+    background-size: cover;
+    background-position:center;
+
+    &__fondoImagen{
+        color: rgb(145, 24, 24);
+        font-size: 55px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(231, 216, 195, 0.514);
+        font-weight: bold;
+        margin: 0 auto; 
+        padding: 10px;
+        width: auto;
+        position:static;
+        text-justify: center;
+        text-align: center;
+    }
+}
+
+/*aca empieza footer*/
+footer{
+    background-image: linear-gradient(rgb(167, 26, 26), rgb(133, 18, 18)) 
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &__consultas{
+        color: white;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 50px;
+    }
+    &__contact{
+        background-color: white;
+        height: auto;
+        width: 50%;
+        justify-items: center;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 2%;
+    height: 5%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    &__seguir{
+        font-size: 20px;
+    }
+
+    a{
+        color:rgb(231, 216, 195);
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+    a:hover{
+        color: white;
+    }
+
+    &__despedida{
+        color: white;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 70px;
+        padding-bottom: 3%;
+    }
+}
+/* Pagina Protocolos Covid*/
+/*aca empieza main*/
+
+@mixin fondo {
+    background-color: burlywood;
+    padding: 0;
+    margin: 0;
+}
+.cuerpo{
+    @include fondo()
+}
+.covid{
+    li{
+        list-style:disc;
+        margin-left: 3%;
+        margin-right: 3%;
+        color: rgb(145, 24, 24);
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 20px;
+        font-weight: bolder;
+        p{
+            color: black;
+            padding-bottom: 5px;
+            font-size: 17px;
+            font-weight: normal;
+        }
+    }
+}
+/* Pagina Conocenos*/
+/*aca empieza main*/
+.chef{
+    list-style:disc;
+    margin-left: 3%;
+    margin-right: 3%;
+    color: rgb(145, 24, 24);
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.formacionProfesional{
+    margin: 2% 5% 2% 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "texto texto texto imagen"
+                         "texto texto texto imagen"
+                         "textoDos textoDos textoDos otraImagen";
+}
+.formacionUno{
+    grid-area: texto;
+    color: black;
+    padding-bottom: 5px;
+    font-size: 17px;
+    font-weight: normal;
+
+}
+.formacionDos{
+    grid-area: imagen;
+}
+.formacionTres{
+    @extend .formacionUno;
+    grid-area: textoDos;
+}
+.formacionCuatro{
+    grid-area: otraImagen;
+}
+
+/* Pagina Servicios*/
+/*aca empieza main*/
+
+table{
+    tr{
+        th{
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+            font-size: medium;
+        }
+    }
+    tr{
+        td{
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+            font-size: small;
+        }
+    }
+}
+
+/* Pagina Galeria*/
+/*aca empieza main*/
+
+.d-block w-100{
+    width: 100px;
+}
+
+/* aplico mobile first hasta 600px                                */
+@media only screen and (max-width:600px){
+    h1{
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        li{
+            text-align: center;
+            border-style:inherit;
+        }
+    }
+    /* aplica a pagina covid*/
+    .covid li{
+        text-align: center;
+        p{
+            text-align: left;
+        }
+    }
+}
+
+/* aplico mobile first desde 768px                                */
+@media only screen and (max-width:768px){
+    /* aplica a pagina covid*/
+
+}
+
+/* aplico mobile first desde 768px                                */
+@media only screen and (min-width:768px){
+
+}

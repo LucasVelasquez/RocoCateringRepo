@@ -1,0 +1,374 @@
+
+/* La idea seria letra blanca sobre fondo Rojo para en header, pero de momento iria roja*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: red;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-left: 2%;
+}
+
+a{
+    color: burlywood;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}
+
+h2{
+    color: rgb(167, 26, 26);
+    font-family: 'Montserrat', sans-serif;
+    margin: 1%;
+}
+
+p{
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+th{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+}
+
+td{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+}
+
+li{
+    color: cadetblue;
+    font-family: 'Montserrat', sans-serif;
+    list-style:decimal;
+}
+
+.fondoImagen{
+    color: rgb(145, 24, 24);
+    font-size: 55px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(231, 216, 195, 0.514);
+    font-weight: bold;
+    margin: 0 auto; 
+    padding: 10px;
+    width: auto;
+    position:static;
+    text-justify: center;
+    text-align: center;
+ 
+}
+
+.linkMenu{
+    color:rgb(145, 24, 24);
+}
+.menu{
+    
+    list-style:none;
+    margin: 10;
+    border-style:solid;
+    border-color: black;
+    padding: 10px;
+    background-color: rgb(231, 216, 195);
+
+}
+.menu:hover {
+    background-color: rgb(165, 36, 36);
+
+}
+
+.ulMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+ul li{
+    color: rgb(223, 17, 86);
+    text-decoration: none;
+    display: block;
+    margin: 10;
+    border-style:solid;
+    border-color: black;
+    padding: 10px;
+    background-color: rgb(235, 154, 79);
+}
+
+header{
+    background-color: white;
+}
+
+/*aca empieza footer*/
+
+footer{
+    background-image: linear-gradient(rgb(167, 26, 26), rgb(133, 18, 18)) 
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact{
+    height: auto;
+    width: 50%;
+    justify-items: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.campos{
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position:relative;
+    width: auto;
+    right: 0;
+    margin: 20px;
+    padding: 16px;
+    margin-top: 2%;
+    
+}
+
+.boton{
+    width: 50%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: #b6b6b6
+}
+
+.boton:active {
+    background-color: #b6b6b6;
+    transform: translateY(4px)
+}
+
+.redesSociales{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 2%;
+    height: 5%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact{
+    background-color: white;
+}
+
+.consultas{
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+.mensajeDespedida{
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
+    padding-bottom: 3%;
+}
+
+/*Los Main*/
+
+main{
+    background-color:burlywood;
+}
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height: 500px;
+    background-image: url("Media/plato2.jpg");
+    background-size: cover;
+    background-position:center;
+}
+
+/* pagina covid */
+
+.protocolosCovid{
+    list-style:circle;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+/* pagina Galeria */
+.galeria{
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 3% 47% 3% 47%;
+    justify-items: center;
+    align-items: center;
+
+}
+.subGaleriaTxt{
+    height: auto;
+    width: auto;
+}
+.subGaleriaImagen{
+    height: 95%;
+    width: 95%;
+}
+
+/* pagina Formacion Profesional*/
+.formacionProfesional{
+    margin: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "texto texto texto imagen"
+                         "texto texto texto imagen"
+                         ".     .     .     imagen"
+                         "textoDos textoDos textoDos otraImagen";
+}
+
+.formacionUno{
+    grid-area: texto;
+
+}
+.formacionDos{
+    grid-area: imagen;
+}
+.formacionTres{
+    grid-area: textoDos;
+}
+.formacionCuatro{
+    grid-area: otraImagen;
+}
+
+form{
+    padding: 3%;
+    border-radius: 50%;
+    align-items:stretch;
+}
+
+/* aplico mobile first hasta 600px                                */
+@media only screen and (max-width:600px){
+
+    /* aplico mobile first a HOME*/
+
+    h1{
+        text-align: center;
+    }
+
+    .ulMenu{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+    
+    ul li{
+        display: block;
+        margin: 10;
+        border-style:solid;
+        border-color: black;
+        padding: 10px;
+        background-color: rgb(235, 154, 79);
+        text-align: center;
+    }
+
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    fieldset{
+        background-color: white;
+        width: auto;
+
+    }
+
+    .contact{
+        height: auto;
+        width: 60%;
+        justify-items: center;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* aplico mobile first a Formacion Profesional*/
+    .formacionProfesional{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formacionDos{
+        height: 95%;
+        width: 95%;
+    }
+
+    .consultas{
+        color: white;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+    }
+}
+
+/* aplico mobile first desde 768px                                */
+@media only screen and (max-width:768px){
+
+    h1{
+        text-align: center;
+        padding: 3%;
+    }
+
+    .formacionProfesional{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "texto texto texto imagen"
+                             "texto texto texto imagen"
+                             ".     .     .     imagen"
+                             "textoDos textoDos textoDos otraImagen";
+    }  
+
+    .formacionUno{
+        grid-area: texto;
+    
+    }
+    .formacionDos{
+        grid-area: imagen;
+    }
+    .formacionTres{
+        grid-area: textoDos;
+    }
+    .formacionCuatro{
+        grid-area: otraImagen;
+    }
+
+    .consultas{
+        color: white;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+    }
+}
+
+/* aplico mobile first desde 768px                                */
+@media only screen and (min-width:768px){
+
+}
